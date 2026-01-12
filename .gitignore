@@ -1,0 +1,28 @@
+# --- OS spécifiques ---
+.DS_Store
+Thumbs.db
+
+# --- Frontend (Node/React) ---
+client/node_modules/
+client/dist/
+client/.env
+client/.env.local
+
+# --- Backend (Python) ---
+server/__pycache__/
+server/*.py[cod]
+server/.venv/
+server/env/
+server/venv/
+server/.env
+
+# --- Sifflo spécifique ---
+# On ignore les fichiers audio enregistrés dans le dossier temp
+server/temp/*.wav
+server/temp/*.mp3
+
+# --- Logs et divers ---
+*.log
+.vscode/
+.idea/
+server/ffmpeg.exe
