@@ -82,7 +82,6 @@ const Recorder = ({ onAnalysisComplete }) => {
     return (
         <div style={{ padding: '20px', textAlign: 'center', border: '1px solid #ddd', borderRadius: '15px', background: '#fff', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
             <div style={{ marginBottom: '15px' }}>
-                {/* changé color: 'white' par #333 pour que ce soit visible sur le fond blanc */}
                 <label style={{ color: '#333', display: 'flex', alignItems: 'center', gap: '10px', justifyContent: 'center', cursor: 'pointer', fontWeight: '600' }}>
                     <input 
                         type="checkbox" 

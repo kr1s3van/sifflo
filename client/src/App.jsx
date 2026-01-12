@@ -24,7 +24,7 @@ function App() {
   return (
     <div style={{ padding: '60px 20px' }}>
       
-      {/* Le Titre Stylisé */}
+      {/* Le Titre */}
       <header className="page-transition">
         <h1 className="sifflo-logo">SIFFLO</h1>
         <p className="subtitle">du siflot a la partition</p>

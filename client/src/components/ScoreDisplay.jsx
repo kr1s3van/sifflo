@@ -8,7 +8,7 @@ const ScoreDisplay = ({ notes }) => {
     // Fonction pour traduire les notes reçues en notation ABC avec durées
     const translateToABC = (noteObjects) => {
         return noteObjects.map(obj => {
-            let res = obj.pitch;       // Le nom de la note (ex: "C#4")
+            let res = obj.pitch;       // Le nom de la note 
             let length = obj.abc_len;  // La durée ABC (genre "2" ou "/2" ou "")
 
             // logique pour les altérations 
@@ -27,7 +27,6 @@ const ScoreDisplay = ({ notes }) => {
     };
 
     //  Quand de nouvelles notes arrivent du serveur, on initialise le code ABC
-    // On ajoute la directive %%MIDI program 74 pour le son de flûte
     useEffect(() => {
         if (notes && notes.length > 0) {
             const translated = translateToABC(notes);
@@ -43,8 +42,7 @@ ${translated} |]`;
         }
     }, [notes]);
 
-    //  À chaque fois que abcCode change (saisie clavier ou nouvelles notes), on redessine
-    // Dans le useEffect qui fait le rendu, on va ajouter le synthétiseur
+    //  À chaque fois que abcCode change, on redessine la partition et initialise le lecteur audio
     useEffect(() => {
         if (abcCode) {
             // On s'assure que la div existe avant de dessiner
@@ -98,7 +96,7 @@ ${translated} |]`;
         {/* Le lecteur audio */}
         <div id="audio-player" style={{ marginBottom: '20px' }}></div>
 
-        {/* La partition : on force une couleur de rendu noire */}
+        {/* La partition */}
         <div id="paper" style={{ 
             background: 'white', 
             borderRadius: '8px', 

@@ -12,6 +12,7 @@ body {
 
 /* Le Titre SIFFLO */
 .sifflo-logo {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 5rem;
   font-weight: 900;
   margin: 0;
@@ -87,4 +88,49 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ÉDITEUR ABC (TEXTAREA) --- */
+.abc-editor {
+  width: 100%;
+  height: 100px;
+  background: #1e293b; /* Fond sombre pour l'éditeur */
+  color: #34d399;      /* Texte vert émeraude (style code) */
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 14px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  outline: none;
+  resize: none;
+  margin-bottom: 20px;
+  transition: border 0.3s;
+}
+
+.abc-editor:focus {
+  border: 1px solid #34d399;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.2);
+}
+
+/* --- ZONE DE LA PARTITION (LE PAPIER) --- */
+.sheet-music-container {
+  background: white; 
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+  min-height: 200px;
+  overflow-x: auto; /* Pour les longues mélodies sur mobile */
+}
+
+/* --- LECTEUR AUDIO ABCJS --- */
+#audio-player {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+/* On change la couleur des boutons du lecteur abcjs pour qu'ils soient verts */
+.abcjs-pabcjs-play-button {
+  fill: #34d399 !important;
 }
